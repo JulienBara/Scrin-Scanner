@@ -2,7 +2,9 @@ import bluetooth
 import requests
 import time
 import os
+from dotenv import load_dotenv
 
+load_dotenv()
 path = os.environ["BACKEND_URL"]
 
 while 1:
