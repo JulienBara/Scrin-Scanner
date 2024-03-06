@@ -8,7 +8,7 @@ load_dotenv()
 path = os.environ["BACKEND_URL"]
 
 while 1:
-    nearby_devices = bluetooth.discover_devices(lookup_names=True)
+    nearby_devices = bluetooth.discover_devices(lookup_names=True, duration=30)
     print("Found {} devices.".format(len(nearby_devices)))
 
     for addr, name in nearby_devices:
