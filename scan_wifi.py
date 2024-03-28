@@ -6,6 +6,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 path = os.environ["BACKEND_URL"]
+target_ip = os.environ["TARGET_IP"]
 
 def display_results(results):
     print("Found {} devices.".format(len(results)))
@@ -29,8 +30,6 @@ def scan(ip):
     display_results(results)
     
     return results
-
-target_ip = "192.168.1.1/24"
 
 while 1:
     scan_results = scan(target_ip)    
