@@ -4,6 +4,7 @@ Wants=network-online.target
 After=network.target network-online.target
 
 [Service]
+ExecStartPre=timeout 60s bash -c 'until ip a s dev wlan0; do sleep 1; done'
 ExecStart=/usr/bin/sudo /usr/bin/python -u /home/julien/git/Scrin-Scanner/scan_wifi.py
 
 [Install]
