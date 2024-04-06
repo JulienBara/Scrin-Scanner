@@ -3,7 +3,8 @@ Description=Scan Wifi
 After=multi-user.target
 
 [Service]
-ExecStart=/usr/bin/sudo /usr/bin/python /home/julien/git/Scrin-Scanner/scan_wifi.py
+WorkingDirectory=/home/julien/git/Scrin-Scanner
+ExecStart=/usr/bin/sudo /usr/bin/python scan_wifi.py
 
 [Install]
 WantedBy=multi-user.target
