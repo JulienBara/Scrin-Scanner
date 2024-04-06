@@ -4,20 +4,12 @@ import scapy.all as scapy
 import os
 from dotenv import load_dotenv
 from logging import getLogger, INFO
-from azure.monitor.opentelemetry import configure_azure_monitor
 
 load_dotenv()
 path = os.environ["BACKEND_URL"]
 target_ip = os.environ["TARGET_IP"]
 
-configure_azure_monitor()
-
-logger = getLogger(__name__)
-logger.setLevel(INFO) # send logs with level at least: info (default: warning)
-logger.info("Scanner started")
-
 def display_results(results):
-    logger.info("Found {} devices.".format(len(results)))
     print("Found {} devices.".format(len(results)))
     print("IP Address\t\tMAC Address")
     print("-----------------------------------------")
