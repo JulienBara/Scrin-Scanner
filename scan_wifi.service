@@ -7,4 +7,4 @@ After=network-online.target
 ExecStart=/usr/bin/sudo /usr/bin/python -u /home/julien/git/Scrin-Scanner/scan_wifi.py
 
 [Install]
-WantedBy=network-online.target
+WantedBy=multi-user.target
