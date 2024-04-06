@@ -9,6 +9,7 @@ print("App is starting")
 load_dotenv()
 path = os.environ["BACKEND_URL"]
 target_ip = os.environ["TARGET_IP"]
+print(target_ip)
 
 print("App is ready")
 
