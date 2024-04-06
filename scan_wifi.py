@@ -10,7 +10,7 @@ load_dotenv()
 path = os.environ["BACKEND_URL"]
 target_ip = os.environ["TARGET_IP"]
 
-print("App is read")
+print("App is ready")
 
 def display_results(results):
     print("Found {} devices.".format(len(results)))
