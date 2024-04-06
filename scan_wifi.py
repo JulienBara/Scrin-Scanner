@@ -2,13 +2,11 @@ import time
 import requests
 import scapy.all as scapy
 import os
-from os.path import join, dirname
 from dotenv import load_dotenv
 
 print("App is starting")
 
-dotenv_path = join(dirname(__file__), '.env')
-load_dotenv(dotenv_path)
+load_dotenv()
 path = os.environ["BACKEND_URL"]
 target_ip = os.environ["TARGET_IP"]
 
