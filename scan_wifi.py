@@ -1,13 +1,16 @@
+print("App is starting")
+
 import time
 import requests
 import scapy.all as scapy
 import os
 from dotenv import load_dotenv
-from logging import getLogger, INFO
 
 load_dotenv()
 path = os.environ["BACKEND_URL"]
 target_ip = os.environ["TARGET_IP"]
+
+print("App is read")
 
 def display_results(results):
     print("Found {} devices.".format(len(results)))
