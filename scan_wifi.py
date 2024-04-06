@@ -1,10 +1,11 @@
-print("App is starting")
-
+#!/usr/bin/python3
 import time
 import requests
 import scapy.all as scapy
 import os
 from dotenv import load_dotenv
+
+print("App is starting")
 
 load_dotenv()
 path = os.environ["BACKEND_URL"]
