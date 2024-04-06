@@ -1,4 +1,3 @@
-#!/usr/bin/python3 -u
 import time
 import requests
 import scapy.all as scapy
