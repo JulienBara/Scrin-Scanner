@@ -1,6 +1,7 @@
 [Unit]
 Description=Scan Wifi
-After=network-online.target
+Wants=network-online.target
+After=network.target network-online.target
 
 [Service]
 ExecStart=/usr/bin/sudo /usr/bin/python -u /home/julien/git/Scrin-Scanner/scan_wifi.py
